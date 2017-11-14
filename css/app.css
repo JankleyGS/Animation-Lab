@@ -10,6 +10,10 @@ a:hover{
 h3{
   font-family: 'Reem Kufi', sans-serif;
 }
+p{
+  weight:bold;
+  font-family: 'Josefin Sans', sans-serif;
+}
 /*css for coin animation*/
 .coin{
 width: 100px;
@@ -101,7 +105,7 @@ animation: play .8s steps(10) infinite;
 
 /*verse one animation*/
 .firstV{
-animation: fade 10s;
+animation: fade 4s;
 }
 @-webkit-keyframes fade{
   0%{opacity:0;}
@@ -114,6 +118,8 @@ animation: fade 10s;
 
 /*verse two animation*/
 .secondV{
+  transform: translate(370px, 0px);
+  /*this will place the text under nav for verse two*/
   -webkit-animation: spin 1.5s , slide 1.5s;
 animation: spin 1.5s , slide 1.5s;
 }
@@ -129,16 +135,16 @@ animation: spin 1.5s , slide 1.5s;
 /*this will make the text slide 1200px from the right*/
 @keyframes slide {
   0%  { transform: translate(1200px, 0px); }
-  100% { transform: translate(0px, 0px); }
+  100% { transform: translate(370px, 0px); }
 }
 @-webkit-keyframes slide {
   0%  { transform: translate(1200px, 0px); }
-  100% { transform: translate(0px, 0px); }
+  100% { transform: translate(370px, 0px); }
 }
 
 /*verse three animation*/
 .thirdV{
-  text-align:center;
+  text-align: center;
   -webkit-animation: scale 1.5s, fade 1.5;
 animation: scale 1.5s, fade 1.5;
 transition:all 1s;
