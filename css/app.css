@@ -1,5 +1,14 @@
 .nav{
-  background-color: #ffffff;
+  border:2px black;
+}
+a{
+  color:#000000;
+}
+a:hover{
+  color:#474747;
+}
+h3{
+  font-family: 'Reem Kufi', sans-serif;
 }
 /*css for coin animation*/
 .coin{
@@ -59,68 +68,113 @@ animation: play .8s steps(10) infinite;
   100%{opacity:1;}
 }
 
-/*animation for "next" arrow*/
-.next{
-  transform:translate(800px, 0px);
-  /*animation name "drop" is changed to "dropNext" to avoid conflict with
-  other animation inside .title
-  same with animation name "fade", to avoid conflict it was changed to "fadeNext"
-  */
-  -webkit-animation:dropNext 2s , fadeNext 2s;
-  animation:drop 2s , fadeNext 2s;
-  animation-delay:3s;
+/*animation for verse nav*/
+.verseNav{
+  text-align: justify;
+  -webkit-animation:dropV 2s , fadeV 2s;
+  animation:dropV 2s , fadeV 2s;
+/*this places the element 200px up from the default x-y axis*/
 }
-@keyframes dropNext{
-    0%{transform:translate(800px, 0px);}
-  100%{transform:translate(800px, 800px);}
-}
-@-webkit-keyframes dropNext{
-    0%{transform:translate(800px, 0px);}
-  100%{transform:translate(800px, 800px);}
-}
-@keyframes fadeNext{
-  0%{opacity:0.0;}
-  50%{opacity:0.5;}
-  100%{opacity:1.0;}
-}
-@-webkit-keyframes fadeNext{
-  0%{opacity:0.0;}
-  50%{opacity:0.5;}
-  100%{opacity:1.0;}
-}
-/*animation on first verse*/
-.firstV{
-  opacity:0;
-animation: fade 10s;
-animation-delay: 2.5s;
+@keyframes dropV{
+ 0% { transform:translate(0px, -200px);}
 
+ 100% { transform:translate(0px, 0px);}
+ /*this moves the element 200px down; back to it's default position*/
+}
+@-webkit-keyframes dropV{
+ 0% { transform:translate(0px, -200px);}
+
+ 100% { transform:translate(0px, 0px);}
+}
+@keyframes fadeV{
+  0%{opacity:0;}
+  50%{opacity:.5;}
+  100%{opacity:1;}
+ /*this fades in the title as its dropping down*/
+}
+@-webkit-keyframes fadeV{
+  0%{opacity:0;}
+  50%{opacity:.5;}
+  100%{opacity:1;}
+}
+
+
+/*verse one animation*/
+.firstV{
+animation: fade 10s;
 }
 @-webkit-keyframes fade{
   0%{opacity:0;}
   100%{opacity:1;}
-  /*1% { color:#ffffff;}
-
-  50%, 100% { color:#000000;}
-
-  100% {color:#ffffff;}*/
 }
 @keyframes fade{
   0%{opacity:0;}
   100%{opacity:1;}
-  /*1%{ color:#ffffff;}
-
-  50%, 100%{ color:#000000;}
-
-  100% {color:#ffffff;}*/
 }
 
+/*verse two animation*/
 .secondV{
-transformation:translate()
-
+  -webkit-animation: spin 1.5s , slide 1.5s;
+animation: spin 1.5s , slide 1.5s;
+}
+/*this will make the text spin*/
+@keyframes spin {
+  0%{ transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  0% { transform: rotate(0deg); }
+  100%{ transform: rotate(360deg); }
+}
+/*this will make the text slide 1200px from the right*/
+@keyframes slide {
+  0%  { transform: translate(1200px, 0px); }
+  100% { transform: translate(0px, 0px); }
+}
+@-webkit-keyframes slide {
+  0%  { transform: translate(1200px, 0px); }
+  100% { transform: translate(0px, 0px); }
 }
 
+/*verse three animation*/
+.thirdV{
+  text-align:center;
+  -webkit-animation: scale 1.5s, fade 1.5;
+animation: scale 1.5s, fade 1.5;
+transition:all 1s;
+}
+/*this will scale down the text*/
+@keyframes scale {
+  0%{ transform: scale(6); }
+  100%{ transform: scale(1); }
+}
+@-webkit-keyframes scale {
+  0%{ transform: scale(6); }
+  100%{ transform: scale(1); }
+}
 
+/*this scales the text up, zoom in*/
 
+/*@keyframes scale {
+  0%{ transform: scale(6); }
+  100%{ transform: scale(1); }
+}
+@-webkit-keyframes scale {
+  0%{ transform: scale(6); }
+  100%{ transform: scale(1); }
+}*/
+
+/*this should make the text fade in but its not working at the moment*/
+@keyframes fade {
+  0%{ opacity:0.0; }
+  50%{opacity:.5;}
+  100%{ opacity:1; }
+}
+@-webkit-keyframes fade {
+  0%{ opacity:0.0; }
+  50%{opacity:.5;}
+  100%{ opacity:1; }
+}
 
 
 /*css for poem*/
