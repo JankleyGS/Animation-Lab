@@ -1,4 +1,6 @@
-
+.nav{
+  background-color: #ffffff;
+}
 /*css for coin animation*/
 .coin{
 width: 100px;
@@ -13,21 +15,112 @@ animation: play .8s steps(10) infinite;
 
 }
 -webkit-@keyframes play {
-   from { background-position:    0px; }
-     to { background-position: -500px; }
+   1%{ background-position: 0px; }
+  100% { background-position: -500px; }
 }
 
 @keyframes play {
-   from { background-position:    0px; }
-     to { background-position: -1000px; }
+  1%{ background-position: 0px; }
+ 100% { background-position: -1000px; }
 }
 /*end of css for coin animation*/
 
-.firstL{
-transform: translate(0px, 0px);
+
+
+/*poem animation*/
+
+/*animation for the title*/
+.title{
+  text-align: center;
+  -webkit-animation:drop 2s , fadeIn 2s;
+  animation:drop 2s , fadeIn 2s;
+/*this places the element 200px up from the default x-y axis*/
+}
+@keyframes drop{
+ 1% { transform:translate(0px, -200px);}
+
+ 100% { transform:translate(0px, 0px);}
+ /*this moves the element 200px down; back to it's default position*/
+}
+@-webkit-keyframes drop{
+ 1% { transform:translate(0px, -200px);}
+
+ 100% { transform:translate(0px, 0px);}
+}
+@keyframes fadeIn{
+  0%{opacity:0;}
+  50%{opacity:.5;}
+  100%{opacity:1;}
+ /*this fades in the title as its dropping down*/
+}
+@-webkit-keyframes fadeIn{
+  0%{opacity:0;}
+  50%{opacity:.5;}
+  100%{opacity:1;}
 }
 
-.firstL:hover{
-transform: translate(10px, 10px);
+/*animation for "next" arrow*/
+.next{
+  transform:translate(800px, 0px);
+  /*animation name "drop" is changed to "dropNext" to avoid conflict with
+  other animation inside .title
+  same with animation name "fade", to avoid conflict it was changed to "fadeNext"
+  */
+  -webkit-animation:dropNext 2s , fadeNext 2s;
+  animation:drop 2s , fadeNext 2s;
+  animation-delay:3s;
+}
+@keyframes dropNext{
+    0%{transform:translate(800px, 0px);}
+  100%{transform:translate(800px, 800px);}
+}
+@-webkit-keyframes dropNext{
+    0%{transform:translate(800px, 0px);}
+  100%{transform:translate(800px, 800px);}
+}
+@keyframes fadeNext{
+  0%{opacity:0.0;}
+  50%{opacity:0.5;}
+  100%{opacity:1.0;}
+}
+@-webkit-keyframes fadeNext{
+  0%{opacity:0.0;}
+  50%{opacity:0.5;}
+  100%{opacity:1.0;}
+}
+/*animation on first verse*/
+.firstV{
+  opacity:0;
+animation: fade 10s;
+animation-delay: 2.5s;
 
 }
+@-webkit-keyframes fade{
+  0%{opacity:0;}
+  100%{opacity:1;}
+  /*1% { color:#ffffff;}
+
+  50%, 100% { color:#000000;}
+
+  100% {color:#ffffff;}*/
+}
+@keyframes fade{
+  0%{opacity:0;}
+  100%{opacity:1;}
+  /*1%{ color:#ffffff;}
+
+  50%, 100%{ color:#000000;}
+
+  100% {color:#ffffff;}*/
+}
+
+.secondV{
+transformation:translate()
+
+}
+
+
+
+
+
+/*css for poem*/
