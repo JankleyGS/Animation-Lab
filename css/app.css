@@ -1,18 +1,38 @@
-.nav{
-  border:2px black;
-}
 a{
+  font-family: 'Reem Kufi', sans-serif;
   color:#000000;
+  padding:20px;
 }
 a:hover{
-  color:#474747;
+  /*dark cream*/
+  color:#916838;
 }
-h3{
+body{
+  /*cream color*/
+  background-color:#ffffff;
+}
+h2{
+  color:#376668;
   font-family: 'Reem Kufi', sans-serif;
 }
+h4{
+  color:#916838;
+  font-family: 'Reem Kufi', sans-serif;
+}
+h3{
+  color:#916838;
+}
+h3:hover{
+  color:#C48C4B;
+}
+
 p{
-  weight:bold;
-  font-family: 'Josefin Sans', sans-serif;
+  color:#376668;
+font-size: 20px;
+font-family: 'Asar', serif;
+}
+#sprite{
+  text-align: center;
 }
 /*css for coin animation*/
 .coin{
@@ -74,10 +94,15 @@ animation: play .8s steps(10) infinite;
 
 /*animation for verse nav*/
 .verseNav{
-  text-align: justify;
+  color:#916838;
+  font-family: 'Reem Kufi', sans-serif;
+  text-align: center;
   -webkit-animation:dropV 2s , fadeV 2s;
   animation:dropV 2s , fadeV 2s;
 /*this places the element 200px up from the default x-y axis*/
+}
+.verseNav:hover{
+  color:#C48C4B;
 }
 @keyframes dropV{
  0% { transform:translate(0px, -200px);}
@@ -105,6 +130,7 @@ animation: play .8s steps(10) infinite;
 
 /*verse one animation*/
 .firstV{
+  transform:translate(300px,0px);
 animation: fade 4s;
 }
 @-webkit-keyframes fade{
