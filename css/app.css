@@ -1,18 +1,24 @@
 a{
   font-family: 'Reem Kufi', sans-serif;
-  color:#000000;
-  padding:20px;
+  /*dark grey*/
+  color:#313233;
+  padding:20px 20px 5px 20px;
 }
+
+
 a:hover{
-  /*dark cream*/
-  color:#916838;
+  /*light grey*/
+  color:#525354;
+}
+.nav{
+  border-bottom: .5px solid #525354;
 }
 body{
   /*cream color*/
   background-color:#ffffff;
 }
 h2{
-  color:#376668;
+  color:#BC3F00;
   font-family: 'Reem Kufi', sans-serif;
 }
 h4{
@@ -20,22 +26,27 @@ h4{
   font-family: 'Reem Kufi', sans-serif;
 }
 h3{
-  color:#916838;
+  color:#063F7A;
 }
 h3:hover{
-  color:#C48C4B;
+  color:#FF5904;
 }
 
 p{
-  color:#376668;
+  color:#FF5904;
 font-size: 20px;
 font-family: 'Asar', serif;
 }
+/*style for paragraphs*/
+
 #sprite{
   text-align: center;
+  color:#FF5904;
 }
+
 /*css for coin animation*/
 .coin{
+  transform:translate(520px,0px);
 width: 100px;
 height: 100px ;
 background-image: url("../images/coin-sprite.png");
@@ -64,6 +75,8 @@ animation: play .8s steps(10) infinite;
 
 /*animation for the title*/
 .title{
+  transform:translate(0px, 250px);
+  color:#FF5904;
   text-align: center;
   -webkit-animation:drop 2s , fadeIn 2s;
   animation:drop 2s , fadeIn 2s;
@@ -72,13 +85,13 @@ animation: play .8s steps(10) infinite;
 @keyframes drop{
  1% { transform:translate(0px, -200px);}
 
- 100% { transform:translate(0px, 0px);}
+ 100% { transform:translate(0px, 250px);}
  /*this moves the element 200px down; back to it's default position*/
 }
 @-webkit-keyframes drop{
  1% { transform:translate(0px, -200px);}
 
- 100% { transform:translate(0px, 0px);}
+ 100% { transform:translate(0px, 250px);}
 }
 @keyframes fadeIn{
   0%{opacity:0;}
@@ -94,7 +107,8 @@ animation: play .8s steps(10) infinite;
 
 /*animation for verse nav*/
 .verseNav{
-  color:#916838;
+  transform: translate(300px,0px);
+  color:#229BB7;
   font-family: 'Reem Kufi', sans-serif;
   text-align: center;
   -webkit-animation:dropV 2s , fadeV 2s;
@@ -102,7 +116,7 @@ animation: play .8s steps(10) infinite;
 /*this places the element 200px up from the default x-y axis*/
 }
 .verseNav:hover{
-  color:#C48C4B;
+  color:#67C000;
 }
 @keyframes dropV{
  0% { transform:translate(0px, -200px);}
@@ -177,11 +191,11 @@ transition:all 1s;
 }
 /*this will scale down the text*/
 @keyframes scale {
-  0%{ transform: scale(6); }
+  0%{ transform: scale(5); }
   100%{ transform: scale(1); }
 }
 @-webkit-keyframes scale {
-  0%{ transform: scale(6); }
+  0%{ transform: scale(5); }
   100%{ transform: scale(1); }
 }
 
